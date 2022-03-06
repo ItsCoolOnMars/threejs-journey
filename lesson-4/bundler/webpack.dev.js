@@ -20,12 +20,12 @@ module.exports = merge(
         },
         devServer:
         {
-            host: 'local-ip',
-            port: portFinderSync.getPort(8080),
+            host: '0.0.0.0',
+            port: 3000,
             open: true,
             https: false,
-            allowedHosts: 'all',
-            hot: false,
+            allowedHosts: ['localhost', '.gitpod.io'],
+            hot: true,
             watchFiles: ['src/**', 'static/**'],
             static:
             {
